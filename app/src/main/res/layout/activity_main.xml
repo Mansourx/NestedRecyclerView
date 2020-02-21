@@ -3,12 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/linear_layout1"
+    android:orientation="vertical">
 
- <androidx.recyclerview.widget.RecyclerView
-     android:id="@+id/vertical_recycler_view"
-     android:layout_width="match_parent"
-     android:layout_height="match_parent"
-     android:layout_margin="5dp" />
+
 
 </LinearLayout>

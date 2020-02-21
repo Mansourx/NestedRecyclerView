@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,6 +23,7 @@ class VerticalRecyclerAdapter():
 
     private lateinit var context: Context
     private lateinit var arrayList: ArrayList<VerticalModel>
+
 
     constructor(context: Context, arrayList: ArrayList<VerticalModel>) : this() {
         this.context = context
@@ -51,14 +53,19 @@ class VerticalRecyclerAdapter():
         holder.recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,
             false)
         holder.recyclerView.adapter = horizantalRecyclerAdapter
-
+        LinearLayout.LayoutParams(
+               LinearLayout.LayoutParams.WRAP_CONTENT,
+                R.dimen.recycler_view_height)
+        holder.linearLyaout2.addView(holder.recyclerView)
     }
 
 
     // Inner Class to create the view holder for the
     // recycler view Row
     inner class VerticalRecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val recyclerView: RecyclerView = itemView.recyclerview1
+        //val recyclerView: RecyclerView = itemView.recyclerview1
+        val linearLyaout2 = itemView.linear_layout2
+        var recyclerView: RecyclerView = RecyclerView(context)
         val titleTxt: TextView = itemView.title_tv
         val btnMore: Button = itemView.btnMore
     }

@@ -3,7 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5dp">
+    android:padding="5dp"
+    android:id="@+id/linear_layout2">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -31,12 +32,4 @@
             android:textColor="#FFF"
             android:background="@color/colorPrimary"/>
     </RelativeLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview1"
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_gravity="center_vertical"
-        android:orientation="horizontal"/>
-
 </LinearLayout>
